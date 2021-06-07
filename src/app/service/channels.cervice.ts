@@ -12,10 +12,13 @@ export class SERVER_DATA {
   constructor(private http: HttpClient, private errorService: ErrorService) {}
 
   private url: string = 'channelDetails';
+  /** это костыль только в текущем случае, т.к. json-server  не работает при total != object | array*/
+  private total: string = 'total';
   public subscriptions$: Subscription = new Subscription();
 
   /**  Храним данные с сервера */
   public channelData: any;
+  public channelTotal: any;
 
   public _get<T = unknown>(
     url: string,
@@ -37,5 +40,12 @@ export class SERVER_DATA {
       .pipe()
       .subscribe((response) => (this.channelData = response));
     }
+
+      /**  Получаем данные с сервера */
+  public fetchTotal(): Subscription {
+    return  this.readData(this.total, '')
+    .pipe()
+    .subscribe((response) => (this.channelTotal = response));
+  }
 
 }

@@ -6,7 +6,17 @@
   background-position: center;
   border-radius: 5px;
 }
-
+.preview-hover {
+  top:0px;
+  position: relative;
+  cursor: pointer;
+  transition: .5s linear;
+}
+.preview-hover:hover {
+  margin-top:-7px;
+  transition: .5s linear;
+  border: solid #BA9D5A 2px;
+}
 button {
   font-size: 14px;
   line-height: 16px;
@@ -16,4 +26,8 @@ font-weight: normal;
 text-align: center;
 border: none;
 background: transparent;
+}
+.total {
+  font-size: 18px;
+  color:#FFFFFF;
 }

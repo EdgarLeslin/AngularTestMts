@@ -7,9 +7,10 @@ import { ErrorService } from '@views/service/error.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChannelsComponent } from './channels/channels.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, ChannelsComponent],
+  declarations: [AppComponent, ChannelsComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [SERVER_DATA, ErrorService],
   bootstrap: [AppComponent],
