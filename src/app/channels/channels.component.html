@@ -1,0 +1,29 @@
+
+
+
+<div class="container">
+  <div class="row">
+<div class="col-md-3 col-lg-2 col-6 " *ngFor="let channel of this.serverData.channelData"  >
+  <div class="preview-chanel" [ngStyle]="{'background-image': 'url(' + getBgImage(channel) + ')'}" >
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+<div class="row text-center">
+  <picture>
+    <img alt="Показать еще" title="Показать еще" src="/src/assets/image/refresh.png">
+  </picture>
+<button (click)="getMore()">Показать еще</button>
+</div>
+
+
+
+</div>
+
+

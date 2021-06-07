@@ -1,0 +1,19 @@
+.preview-chanel {
+  height: 96px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+}
+
+button {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+border: none;
+background: transparent;
+}
