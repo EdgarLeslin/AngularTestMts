@@ -11,6 +11,7 @@
   position: relative;
   cursor: pointer;
   transition: .5s linear;
+  margin-bottom: 23px;
 }
 .preview-hover:hover {
   margin-top:-7px;
@@ -26,8 +27,11 @@ font-weight: normal;
 text-align: center;
 border: none;
 background: transparent;
+color: #E8F9FF;
+margin-top: 10px;
 }
 .total {
   font-size: 18px;
   color:#FFFFFF;
+  margin-bottom: 15px;;
 }

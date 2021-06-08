@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container padding-header">
 <div class="row">
   <div class="col-6 flex-menu-space-around text-span">
   <span>
@@ -16,14 +16,17 @@
 
 
 <div class="col-6 flex-menu-flex-end">
-  <button>
+  <button (click)="sortButton()">
     Сортировка
+    <span *ngIf="this.serverData.sortFlag"> (А-Я)</span>
+    <span *ngIf="!this.serverData.sortFlag && this.serverData.apiVar"> (Я-А)</span>
   </button>
 
 
-  <button>
+  <button >
     Телеканалы
   </button>
+
 </div>
 </div>
 </div>

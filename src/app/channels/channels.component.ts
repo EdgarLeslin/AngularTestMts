@@ -12,8 +12,8 @@ import { ICurrentData } from '@views/interface/channelData.interface'
 export class ChannelsComponent implements OnInit, OnDestroy {
   constructor(public serverData: SERVER_DATA) {}
 
-  private endPage: number = 24;
-  private apiFragment:string = '?_start=0&_end='
+
+
 
 
   public getTotal(): string{
@@ -30,16 +30,18 @@ export class ChannelsComponent implements OnInit, OnDestroy {
 
 
 
-  public getMore(){
-    this.endPage += 12;
-    this.serverData.fetchData(this.apiFragment + this.endPage)
+  public getMore(): void{
+    this.serverData.endPage += 12;
+    this.serverData.summApi()
+    this.serverData.fetchData(this.serverData.apiVar)
+
   }
 
 
 
   ngOnInit(): void {
     this.serverData.fetchTotal();
-    this.serverData.fetchData(this.apiFragment + this.endPage)
+    this.serverData.fetchData(this.serverData.apiFragment + this.serverData.endPage)
   }
 
 
